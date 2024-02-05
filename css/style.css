@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: OpenSans-Medium;
+    transition: all .3s ease;
+}
+
+@font-face {
+    font-family: OpenSans-Medium;
+    src: url(../fonts/OpenSans-Medium.ttf);
+}
+
+h1,h3{
+    margin: 0px;
+    padding: 0px;
+}
+
+input[type="submit"]{
+    float: right;
+    background: #9C27B0;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+button,textarea,input{
+    border: none;
+    outline: none;
+}
+
+.block{
+    position: relative;
+}
+
+#app{
+
+    width: 100%;
+    margin: auto;
+
+}
+
+nav{
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    background: rgb(255 255 255 / 61%);
+}
+
+nav .navbar{
+    list-style: none;
+    width: 60%;
+    float: right;
+}
+
+nav .logo-nav{
+    position: fixed;
+    padding: 10px;
+    top: 10px;
+    left: 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+
+nav ul li a{
+    padding: 14px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+nav ul li a:hover{
+    background: linear-gradient(45deg, black, #9C27B0);
+    color: white;
+}
+
+#about-me{
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+#about-me h1{
+    font-size: 42px;
+}
+
+#about-me h3{
+    padding: 10px;
+    background: black;
+    color: white;
+    width: fit-content;
+    margin: 10px 0px;
+    letter-spacing: 8px;
+}
+
+#about-me .layer{
+    width: 100%;
+    background: linear-gradient(45deg, #673AB7, #ffffff1f);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+
+#about-me .layer .text{
+    position: absolute;
+    height: fit-content;
+    width: 45%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 5%;
+    line-height: 2.3;
+    background: linear-gradient(45deg, #c9c9c9, #ffffff);
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+#about-me .layer .text button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: linear-gradient(45deg, black, #673AB7);
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+    border-radius: 10px 0 10px 0px;
+    float: right;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+#about-me .layer .img{
+    position: absolute;
+    height: fit-content;
+    width: 45%;
+    bottom: 0;
+    margin: auto;
+    right: 2%;
+}
+
+#about-me .layer .img img{
+    width: 500px;
+}
+
+.title{
+    padding: 10px;
+    color: white;
+    background: linear-gradient(45deg, black, #9C27B0);
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.container{
+
+    width: 96%;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 20px 0px;
+
+}
+
+.container .list{
+    float: left;
+    width: calc(92%/4);
+    margin: 0 1%;
+    text-align: left;
+}
+
+.container .list span{
+    display: block;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .list-line{
+    overflow: hidden;
+    position: relative;
+    margin: 3% 0px;
+    box-shadow: 0px 0px 3px #673AB7;
+}
+
+.container .list-line span{
+    float: left;
+    width: 80%;
+}
+
+.container .list-line i{
+    position: absolute;
+    top: 0;
+    width: 0;
+    padding: 10px;
+    background: linear-gradient(45deg, black, #9C27B0);
+    color: white;
+    text-align: center;
+    bottom: 0;
+    left: 66.66%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    opacity: 0;
+}
+
+.footer{
+
+    color: white;
+    background: black;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.cards{
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+
+}
+
+.cards .card{
+
+    float: left;
+    width: calc(94%/3);
+    margin: 1%;
+    box-shadow: rgb(103, 58, 183) 0px 0px 4px;
+
+}
+
+.cards .card .title{
+    background: linear-gradient(45deg, black, #9C27B0);
+    margin: 0px 0px 10px;
+    padding: 20px;
+}
+
+.cards .card .body .line{
+
+    display: block;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.cards .card .body .line:hover{
+    box-shadow: 0 0 4px;
+    color: #ffffff;
+    transform: scale(0.95, 1.05);
+    letter-spacing: 5px;
+    border-radius: 5px;
+    background: #673AB7;
+}
+
+.list-line::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #673AB7;
+}
+
+form{
+    width: 60%;
+    margin: auto;
+    position: absolute;
+    inset: 0px;
+    height: fit-content;
+    box-shadow: rgb(103, 58, 183) 0px 0px 1px;
+    padding: 10px;
+}
+
+form label{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0px 1px #9C27B0;
+    margin: 10px 0px;
+    background: #f9f9f9;
+}
+
+form label span{
+    float: left;
+    width: 20%;
+    text-align: left;
+    padding: 10px;
+}
+
+form label input{
+    float: left;
+    width: 80%;
+    padding: 12px;
+}
+
+form label textarea{
+    padding: 10px;
+    width: 80%;
+    height: 200px;
+}
+
+.testimonials{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    overflow: hidden;
+    box-shadow: 0 0 3 #673AB7;
+    margin: auto;
+    height: 500px;
+    box-shadow: inset 0 0 3px #673AB7;
+}
+
+.testimonials .testimonial{
+    width: 100%;
+    padding: 40px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all 1.5s ease;
+    opacity: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+.testimonial:hover{
+    transform: scale(1.05)!important;
+    background:#d7d7d7
+}
+
+.testimonial.center{
+    transform: translateX(0px);
+    z-index: 999;
+    opacity: 1 !important;
+}
+
+.testimonial.left{
+    transform: translateX(-100%);
+    z-index: 998;
+}
+
+.testimonial.right{
+    transform: translateX(100%);
+    z-index: 998;
+}
+
+.t-name{
+    padding: 10px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.t-job{
+    margin: 0px 0px 20px;
+    color: #9C27B0;
+    font-size: 15px;
+}
+
+.t-msg{
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.arrow {
+    position: absolute;
+    height: 60px;
+    top: 0px;
+    bottom: 0px;
+    font-size: 30px;
+    background: rgb(156, 39, 176);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: auto;
+    z-index: 1000;
+}
+
+.arrow:hover{
+    height: 100px;
+}
+
+.left-arrow{
+    left: 0;
+}
+
+.right-arrow{
+    right: 0;
+}
